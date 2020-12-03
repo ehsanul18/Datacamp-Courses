@@ -1,0 +1,42 @@
+# Subsetting columns
+# When working with data, you may not need all of the variables in your dataset. Square brackets ([]) can be used to select only the columns that matter to you in an order that makes sense to you. To select only "col_a" of the DataFrame df, use
+
+# df["col_a"]
+# To select "col_a" and "col_b" of df, use
+
+# df[["col_a", "col_b"]]
+# homelessness is available and pandas is loaded as pd.
+
+# Instructions 1/3
+# 35 XP
+# Create a DataFrame called individuals that contains only the individuals column of homelessness.
+# Print the head of the result.
+
+# Instructions 2/3
+# Create a DataFrame called state_fam that contains only the state and family_members columns of homelessness, in that order.
+# Print the head of the result.
+
+# Instructions 3/3
+# Create a DataFrame called ind_state that contains the individuals and state columns of homelessness, in that order.
+# Print the head of the result.
+
+
+# # Select the individuals column (Instruction 1)
+# individuals = homelessness["individuals"]
+
+# # Print the head of the result
+# print(individuals.head())
+
+
+# # Select the state and family_members columns (Instruction 2)
+# state_fam = homelessness[['state', 'family_members']]
+
+# # Print the head of the result
+# print(state_fam.head())
+
+
+# Select only the individuals and state columns, in that order (Instruction 3)
+ind_state = homelessness[['individuals', 'state']]
+
+# Print the head of the result
+print(ind_state.head())
